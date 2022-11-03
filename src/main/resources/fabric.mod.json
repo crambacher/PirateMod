@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "pirate",
+  "version": "${version}",
+
+  "name": "Pirate Mod",
+  "description": "This mod adds pirates and sandy beaches to the game.",
+  "authors": [
+    "FirebrandOmega"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "MIT License",
+  "icon": "assets/pirate/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.firebrandomega.pirate.PirateMod"
+    ],
+    "client": [
+      "net.firebrandomega.pirate.PirateModClient"
+    ],
+    "fabric-datagen": [
+      "net.firebrandomega.pirate.datagen.ModDataGeneration"
+    ]
+  },
+  "mixins": [
+    "pirate.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
